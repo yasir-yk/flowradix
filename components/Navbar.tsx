@@ -8,11 +8,11 @@ import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 
 const NAV_LINKS = [
-  { name: "Products", href: "#products" },
-  { name: "Services", href: "#services" },
-  { name: "Ecosystem", href: "#ecosystem" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
+  { name: "Products", href: "/#products" },
+  { name: "Services", href: "/#services" },
+  { name: "Ecosystem", href: "/#ecosystem" },
+  { name: "About", href: "/#about" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export function Navbar() {

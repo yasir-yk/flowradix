@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowUp, Github, Twitter, Linkedin, MessageSquare, ExternalLink, Shield, Code, Heart } from "lucide-react";
+import { ArrowUp, Github, Twitter, Linkedin, MessageSquare, ExternalLink, Shield, MapPin } from "lucide-react";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -20,6 +20,13 @@ export function Footer() {
             <p className="text-sm leading-relaxed max-w-sm text-slate-600 dark:text-slate-400">
               FlowRadix engineers high-scale e-commerce plugins, headless architectures, and automated Meta/WhatsApp conversational pipelines for modern global brands.
             </p>
+
+            {/* Office Address */}
+            <div className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-400 pt-1">
+              <MapPin className="w-4 h-4 text-teal-600 dark:text-teal-400 shrink-0 mt-0.5" />
+              <span>House no. 05 Mehtab St. Chohan Rd IslamPura</span>
+            </div>
+
             <div className="flex items-center gap-3 pt-2">
               <a
                 href="https://github.com"
@@ -67,27 +74,27 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5">
               <li>
-                <Link href="#products" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+                <Link href="/#products" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
                   Flagship Products
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+                <Link href="/#services" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
                   Engineering Services
                 </Link>
               </li>
               <li>
-                <Link href="#ecosystem" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+                <Link href="/#ecosystem" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
                   Integration Ecosystem
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+                <Link href="/#about" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
                   Technical Standard
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+                <Link href="/#contact" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
                   Request Consultation
                 </Link>
               </li>
@@ -126,10 +133,10 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Col 5: Security & Status */}
+          {/* Col 5: Security & Compliance */}
           <div>
             <h4 className="font-bold text-slate-900 dark:text-white text-xs uppercase tracking-wider mb-4">
-              System Telemetry
+              Legal & Telemetry
             </h4>
             <div className="space-y-3">
               <div className="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs">
@@ -139,18 +146,25 @@ export function Footer() {
                 </div>
                 <div className="text-slate-500 dark:text-slate-400 text-[11px]">Webhook Latency: 42ms avg</div>
               </div>
-              <div className="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
-                <Shield className="w-3.5 h-3.5 text-teal-500" />
-                <span>HMAC Encrypted Ingestion</span>
-              </div>
+              <ul className="space-y-2 text-xs">
+                <li>
+                  <Link href="/privacy-policy" className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+                    <Shield className="w-3.5 h-3.5 text-teal-500" />
+                    <span>Privacy Policy</span>
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar: Copyright & Back to Top */}
         <div className="pt-8 border-t border-slate-200 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-xs text-slate-500 dark:text-slate-400">
-            © {new Date().getFullYear()} FlowRadix (flowradix.com). All rights reserved. Engineered with precision.
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500 dark:text-slate-400">
+            <span>© {new Date().getFullYear()} FlowRadix (flowradix.com). All rights reserved.</span>
+            <Link href="/privacy-policy" className="underline hover:text-teal-500 transition-colors">
+              Privacy Policy
+            </Link>
           </div>
 
           <button
